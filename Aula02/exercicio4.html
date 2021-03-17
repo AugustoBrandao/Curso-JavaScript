@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }       
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Nome: ');
+        var salario = Number(window.prompt('Salario: '));
+
+        document.write(`${nome.length} letras <br/>`);
+        document.write(`<strong>${nome.toUpperCase()}</strong> <br/>`);
+        document.write(`${nome.toLowerCase()} <br/>`);
+        document.write(`Salário: ${salario.toLocaleString('pt-BR',{style: 'currency', currency:'BRL'})}`);
+    </script>
+</body>
+</html>
