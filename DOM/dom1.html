@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos de DOM</h1>
+    <p>Resultado: </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavasScript</p>
+    <div id="msg1">Clique em mim</div>
+    <div name="msg2"><strong>NÃO</strong> Clique em mim</div>
+    <div ></div>
+
+    <script>
+
+        //CAPTURA POR MARCA (TAG)
+        var captura1 = window.document.getElementsByTagName('p')[0]
+        var aviso = window.document.getElementsByTagName('p')[1]
+
+        window.document.write(`Frase: ${aviso.innerText}`)
+        window.alert(captura1.innerHTML)
+
+        
+        //CAPTURA POR ID
+        var msg1 = window.document.getElementById('msg1')
+        msg1.style.background = 'green'
+
+        //CAPTURA POR NOME
+        var msg2 = window.document.getElementsByName('msg2')
+        msg2.style.background = 'blue'
+
+    </script>
+</body>
+</html>
