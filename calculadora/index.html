@@ -5,95 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-
-    <style>
-        .visor{
-            width: 400px;
-            height: 100px;
-            background-color: rgb(233, 233, 233);
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        p{
-            text-align: center;
-            width: 100%;
-            height: 50%;
-            font: normal 40pt Arial;
-        }
-
-        #numbers{
-            position: relative;
-            width: 300px;
-            height: 230px;
-            padding: 6px;
-        }
-
-        button{
-            width: 32%;
-            height: 23%;
-            margin-bottom: 6px;
-            font: normal 18px Arial;
-            cursor: pointer;
-        }
-
-        button#equal{ width: 65%; }
-
-        #operators{
-            position: absolute;
-            border-top: solid 6px #FFF;
-            height: 242px;
-            width: 85px;
-            left: 321px;
-            top: 108px;
-        }
-
-        #operators button{
-            width: 100%;
-            height: 17%; 
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
+<script src="script.js"></script>
 <body>
-    
-    <div class="visor">
-        <p id="number">0</p>
+    <div class="fundo">
+        <div class="calculadora">
+            <p id="resultado"></p>
+            <table>
+                <tr> <!--Linha 1-->
+                    <td><button  onclick="limpar()">   C</button></td>
+                    <td><button  onclick="back()">     <</button></td>
+                    <td><button  onclick="insert('/')">/</button></td>
+                    <td><button  onclick="insert('*')">*</button></td>
+                </tr>
+
+                <tr><!--Linha 2-->
+                    <td><button onclick="insert('7')">7</button></td>
+                    <td><button onclick="insert('8')">8</button></td>
+                    <td><button onclick="insert('9')">9</button></td>
+                    <td><button onclick="insert('-')">-</button></td>
+                </tr>
+
+                <tr><!--Linha 3-->
+                    <td><button onclick="insert('4')">4</button></td>
+                    <td><button onclick="insert('5')">5</button></td>
+                    <td><button onclick="insert('6')">6</button></td>
+                    <td><button onclick="insert('+')">+</button></td>
+                </tr>
+                
+                <tr>
+                    <td><button onclick="insert('1')">1</button></td>
+                    <td><button onclick="insert('2')">2</button></td>
+                    <td><button onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button onclick="calcular()" style="height:108px">=</button></td> <!-- 2 linhas -->
+                </tr>
+
+                <tr>
+                    <td colspan="2"><button onclick="insert('0')" style="width:108px">0</button></td> <!-- 2 colunas-->
+                    <td><button onclick="insert('.')">.</button></td> 
+                </tr>
+            </table>
+        </div>
     </div>
-    
-    <section id="numbers">
-        <button id="one" onclick="insert('')">1</button>
-        <button id="two">2</button>
-        <button id="three">3</button>
-        <button id="four">4</button>
-        <button id="five">5</button>
-        <button id="six">6</button>
-        <button id="seven">7</button>
-        <button id="eight">8</button>
-        <button id="nine">9</button>
-        <button id="zero">0</button>
-        <button id="equal">=</button>
-    </section>
-   
-    <section id="operators">
-        <button id="clear">CLEAR</button>
-        <button id="plus">+</button>
-        <button id="less">-</button>
-        <button id="slash">/</button>
-        <button id="mult">*</button>
-    </section>
-
-    <script>
-
-        function escrever(num)
-        {
-            var one = window.document.getElementById('one').innerHTML
-        }
-
-        function soma(){}
-        function subtracao(){}
-        function multiplicação{}
-        function divisão{}
-    </script>
 </body>
 </html>
