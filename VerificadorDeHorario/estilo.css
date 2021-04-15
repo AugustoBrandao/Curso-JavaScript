@@ -21,3 +21,16 @@ footer{
     text-align: center;
     font-style: italic;
 }
+
+#foto{
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+#horas{
+    font: bold 68px Arial;
+    text-align: center;
+}
