@@ -55,6 +55,6 @@ function carregar(){
         }
         resultado.style.textAlign = 'center'
         resultado.innerHTML = `<h2>Gênero: ${genero} | Idade: ${idade} </h2>`
-        resultado.appendChild(imagem)
+        resultado.appendChild(imagem) //fazer o setAttribute aparecer na tela
     }
 }
